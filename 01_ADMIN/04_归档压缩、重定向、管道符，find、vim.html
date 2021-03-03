@@ -1,0 +1,6646 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <title>CASE</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <script type="text/javascript" data-savepage-src="index.files/jquery.min.js" src=""></script>
+    <script type="text/javascript" data-savepage-src="index.files/jquery.snippet.js" src=""></script>
+    <script type="text/javascript" data-savepage-src="index.files/main.js" src=""></script>
+    <style data-savepage-href="index.files/index.css" type="text/css">div.source_style_case
+{
+    font-family:"微软雅黑", Times New Roman;
+    font-size:14px;   
+    min-width:400px;
+    padding:10px 20px;
+    color:#000;
+    position:relative;
+}
+div.source_style_case div.wordSection
+{
+    width:95%;
+    padding:5px;
+    margin:5px;
+}
+/* 一级标题 */
+div.source_style_case h1
+{
+    text-align:center;    
+    font-size:24px;
+}
+/* 二级标题 */
+div.source_style_case h2
+{
+    margin:16.3px 0px 0px 0px;
+    text-indent:0;
+    font-weight:bold;
+    font-size:20px;
+}
+/* 三级标题 */
+div.source_style_case h3
+{
+    font-size:18px;
+	font-weight:bold;
+	margin:10px 0px 10px 0px;
+	text-indent:0px;
+}
+/* 正文段落 */
+div.source_style_case p
+{
+    margin:3px;
+    padding:2px;
+	text-indent:21.0pt;	
+	font-size:15px;	
+}
+/* 图片、图题 */
+div.source_style_case div.image
+{
+    text-align:center;
+    padding:5px 0px 5px 0px;
+}
+div.source_style_case div.image img
+{
+    max-width:900px;
+}
+div.source_style_case div.image>p
+{
+    text-align:center;
+    margin:5px;
+    padding:3px;
+    font-size:12px;
+}
+
+/* 表格图片、表题 */
+div.source_style_case div.table
+{
+    text-align:center;
+    padding:5px 0px 5px 0px;
+}
+div.source_style_case div.table img
+{
+    max-width:900px;
+}
+div.source_style_case div.table>p
+{
+    text-align:center;
+    margin:5px;
+    padding:3px;
+    font-size:12px;
+}
+
+/* 代码 */
+div.source_style_case p.code,div.source_style_case pre
+{    
+    font-size:14px;
+    color:Red;
+    margin-left:40px;
+}
+
+div.source_style_case .code_level1
+{
+    text-indent:21.0pt;
+}
+div.source_style_case .code_level2
+{
+    text-indent:42.0pt;
+}
+div.source_style_case .code_level3
+{
+    text-indent:63.0pt;
+}
+div.source_style_case .code_level4
+{
+    text-indent:84.0pt;
+}
+
+/* 无序列表 */
+div.source_style_case ul.list,div.source_style_case ol.list
+{
+    margin-left:30px;
+}
+div.source_style_case ol.list
+{
+    padding-left:45px;
+}
+div.source_style_case ul.list li
+{
+    padding-left:10px;
+}
+div.source_style_case ol.list li
+{
+    padding-left:5px;
+}
+
+/* 强调文本 */
+div.source_style_case p.emphasiz
+{
+    font-weight:bold;
+    font-style:italic;
+}
+
+/* 带编号的正文文本 */
+div.source_style_case p.number
+{
+    font-weight:bold;
+    margin-top:8px;
+    margin-bottom:8px;
+    font-size:15px;
+}
+
+/* 目录 */
+div.source_style_case #top_anchor
+{
+    position:absolute;
+}
+div.source_style_case #link_top
+{
+    position:fixed;
+    bottom:60px;
+    right:80px;
+    z-index:20;
+    font-weight:bold;
+    color:#0000FF;
+}
+
+div.source_style_case  ol.index
+{
+    padding:10px;
+    margin-left:40px;
+}
+div.source_style_case ol.index li a
+{
+    color:Blue;
+    text-decoration:none;
+    border-bottom:1px dashed black;
+    font-size:15px;
+}
+div.source_style_case ol.index li a:hover
+{
+    color:Blue;
+    font-weight:bold;
+}
+
+div.source_style_case .highlighter { border: 2px solid #ddd; padding:5px; background: #eee;}
+div.source_style_case .command_help {display:none;}
+</style>
+    <style data-savepage-href="index.files/jquery.snippet.css" type="text/css">/*󌭼ӵđʽ*/
+a.snippet-toggle
+{
+    margin-right:40px;
+}
+.bold_code
+{
+    font-weight:bold;
+    font-size:11pt;
+    color:blue !important;
+    font-family:΢ȭхڬ
+}
+.bold_code>span
+{
+    color:blue !important;
+    font-family:"΢ȭхڢ;  
+    font-weight:bold;
+    font-size:11pt; 
+}
+/*ԭӐѹʽ*/
+.sh_acid
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_acid .sh_sourceCode
+{
+    background-color: #eee;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_keyword
+{
+    color: #bb7977;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_type
+{
+    color: #8080c0;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_string
+{
+    color: #a68500;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_regexp
+{
+    color: #a68500;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_specialchar
+{
+    color: #f0f;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_comment
+{
+    color: #ff8000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_number
+{
+    color: #800080;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_preproc
+{
+    color: #0080c0;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_symbol
+{
+    color: #ff0080;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_function
+{
+    color: #046;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_cbracket
+{
+    color: #ff0080;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_url
+{
+    color: #a68500;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_date
+{
+    color: #bb7977;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_time
+{
+    color: #bb7977;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_file
+{
+    color: #bb7977;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_ip
+{
+    color: #a68500;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_name
+{
+    color: #a68500;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_variable
+{
+    color: #0080c0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_oldfile
+{
+    color: #f0f;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_newfile
+{
+    color: #a68500;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_difflines
+{
+    color: #bb7977;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_selector
+{
+    color: #0080c0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_property
+{
+    color: #bb7977;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_acid .sh_sourceCode .sh_value
+{
+    color: #a68500;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_berries-dark
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_berries-dark .sh_sourceCode
+{
+    background-color: #80bfff;
+    color: #400080;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_keyword
+{
+    color: #3f2bf0;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_type
+{
+    color: #3f2bf0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_string
+{
+    color: #c40000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_regexp
+{
+    color: #c40000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_specialchar
+{
+    color: #77379a;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_comment
+{
+    color: #df0959;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_berries-dark .sh_sourceCode .sh_number
+{
+    color: #20755a;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_preproc
+{
+    color: #0628cb;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_symbol
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_function
+{
+    color: #901164;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_cbracket
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_url
+{
+    color: #c40000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_date
+{
+    color: #3f2bf0;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_time
+{
+    color: #3f2bf0;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_file
+{
+    color: #3f2bf0;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_ip
+{
+    color: #c40000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_name
+{
+    color: #c40000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_variable
+{
+    color: #a91ea7;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_oldfile
+{
+    color: #77379a;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_newfile
+{
+    color: #c40000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_difflines
+{
+    color: #3f2bf0;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_selector
+{
+    color: #a91ea7;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_property
+{
+    color: #3f2bf0;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_berries-dark .sh_sourceCode .sh_value
+{
+    color: #c40000;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_berries-light
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_berries-light .sh_sourceCode
+{
+    background-color: #d7ffff;
+    color: #47406d;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_keyword
+{
+    color: #2cae1e;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_type
+{
+    color: #8b51c0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_string
+{
+    color: #5f81b3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_regexp
+{
+    color: #5f81b3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_specialchar
+{
+    color: #5f81b3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_comment
+{
+    color: #9c3caf;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_berries-light .sh_sourceCode .sh_number
+{
+    color: #20755a;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_preproc
+{
+    color: #0628cb;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_symbol
+{
+    color: #d2073b;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_function
+{
+    color: #901164;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_cbracket
+{
+    color: #d2073b;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_url
+{
+    color: #5f81b3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_date
+{
+    color: #2cae1e;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_time
+{
+    color: #2cae1e;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_file
+{
+    color: #2cae1e;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_ip
+{
+    color: #5f81b3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_name
+{
+    color: #5f81b3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_variable
+{
+    color: #0628cb;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_oldfile
+{
+    color: #5f81b3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_newfile
+{
+    color: #5f81b3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_difflines
+{
+    color: #2cae1e;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_selector
+{
+    color: #0628cb;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_property
+{
+    color: #2cae1e;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_berries-light .sh_sourceCode .sh_value
+{
+    color: #5f81b3;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_bipolar
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_bipolar .sh_sourceCode
+{
+    background-color: #000;
+    color: #d149a6;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_keyword
+{
+    color: #ee85e2;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_type
+{
+    color: #aadd8b;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_string
+{
+    color: #9ef457;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_regexp
+{
+    color: #9ef457;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_specialchar
+{
+    color: #9ef457;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_comment
+{
+    color: #35d6e5;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_bipolar .sh_sourceCode .sh_number
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_preproc
+{
+    color: #07f6bf;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_symbol
+{
+    color: #348fef;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_function
+{
+    color: #d51993;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_cbracket
+{
+    color: #348fef;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_url
+{
+    color: #9ef457;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_date
+{
+    color: #ee85e2;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_time
+{
+    color: #ee85e2;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_file
+{
+    color: #ee85e2;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_ip
+{
+    color: #9ef457;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_name
+{
+    color: #9ef457;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_variable
+{
+    color: #72d42c;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_oldfile
+{
+    color: #9ef457;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_newfile
+{
+    color: #9ef457;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_difflines
+{
+    color: #ee85e2;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_selector
+{
+    color: #72d42c;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_property
+{
+    color: #ee85e2;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_bipolar .sh_sourceCode .sh_value
+{
+    color: #9ef457;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_blacknblue
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_blacknblue .sh_sourceCode
+{
+    background-color: #000;
+    color: #2346d5;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_keyword
+{
+    color: #1ededc;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_type
+{
+    color: #c06cf8;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_string
+{
+    color: #cfc631;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_regexp
+{
+    color: #cfc631;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_specialchar
+{
+    color: #ccc6c6;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_comment
+{
+    color: #6fb2c4;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_blacknblue .sh_sourceCode .sh_number
+{
+    color: #c4ac60;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_preproc
+{
+    color: #8080ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_symbol
+{
+    color: #ccc6c6;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_function
+{
+    color: #1c96ed;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_cbracket
+{
+    color: #ccc6c6;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_url
+{
+    color: #cfc631;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_date
+{
+    color: #1ededc;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_time
+{
+    color: #1ededc;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_file
+{
+    color: #1ededc;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_ip
+{
+    color: #cfc631;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_name
+{
+    color: #cfc631;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_variable
+{
+    color: #ecea26;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_oldfile
+{
+    color: #ccc6c6;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_newfile
+{
+    color: #cfc631;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_difflines
+{
+    color: #1ededc;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_selector
+{
+    color: #ecea26;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_property
+{
+    color: #1ededc;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_blacknblue .sh_sourceCode .sh_value
+{
+    color: #cfc631;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_bright
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_bright .sh_sourceCode
+{
+    background-color: #fff;
+    color: #401e7a;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_keyword
+{
+    color: #ff3030;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_type
+{
+    color: #f7b92c;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_string
+{
+    color: #1861a7;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_regexp
+{
+    color: #1861a7;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_specialchar
+{
+    color: #1861a7;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_comment
+{
+    color: #38ad24;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_number
+{
+    color: #32ba06;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_preproc
+{
+    color: #5374b0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_symbol
+{
+    color: #3030ee;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_function
+{
+    color: #d11ced;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_cbracket
+{
+    color: #3030ee;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_url
+{
+    color: #1861a7;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_date
+{
+    color: #ff3030;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_time
+{
+    color: #ff3030;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_file
+{
+    color: #ff3030;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_ip
+{
+    color: #1861a7;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_name
+{
+    color: #1861a7;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_variable
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_oldfile
+{
+    color: #1861a7;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_newfile
+{
+    color: #1861a7;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_difflines
+{
+    color: #ff3030;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_selector
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_property
+{
+    color: #ff3030;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_bright .sh_sourceCode .sh_value
+{
+    color: #1861a7;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_contrast
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_contrast .sh_sourceCode
+{
+    background-color: #ed6104;
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_keyword
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_type
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_string
+{
+    color: #11f80c;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_regexp
+{
+    color: #11f80c;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_specialchar
+{
+    color: #11f80c;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_comment
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_number
+{
+    color: #971ad8;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_preproc
+{
+    color: #7b44e0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_symbol
+{
+    color: #dedede;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_function
+{
+    color: #fff700;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_cbracket
+{
+    color: #dedede;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_url
+{
+    color: #11f80c;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_date
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_time
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_file
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_ip
+{
+    color: #11f80c;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_name
+{
+    color: #11f80c;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_variable
+{
+    color: #11f80c;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_oldfile
+{
+    color: #11f80c;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_newfile
+{
+    color: #11f80c;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_difflines
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_selector
+{
+    color: #11f80c;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_property
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_contrast .sh_sourceCode .sh_value
+{
+    color: #11f80c;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_darkblue
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_darkblue .sh_sourceCode
+{
+    background-color: #000040;
+    color: #C7C7C7;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_keyword
+{
+    color: #ffff60;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_type
+{
+    color: #60ff60;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_string
+{
+    color: #ffa0a0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_regexp
+{
+    color: #ffa0a0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_specialchar
+{
+    color: #ffa500;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_comment
+{
+    color: #80a0ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_number
+{
+    color: #42cad9;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_preproc
+{
+    color: #ff80ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_symbol
+{
+    color: #d8e91b;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_function
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_cbracket
+{
+    color: #d8e91b;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_url
+{
+    color: #ffa0a0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_date
+{
+    color: #ffff60;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_time
+{
+    color: #ffff60;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_file
+{
+    color: #ffff60;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_ip
+{
+    color: #ffa0a0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_name
+{
+    color: #ffa0a0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_variable
+{
+    color: #26e0e7;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_oldfile
+{
+    color: #ffa500;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_newfile
+{
+    color: #ffa0a0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_difflines
+{
+    color: #ffff60;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_selector
+{
+    color: #26e0e7;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_property
+{
+    color: #ffff60;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkblue .sh_sourceCode .sh_value
+{
+    color: #ffa0a0;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_darkness
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_darkness .sh_sourceCode
+{
+    background-color: #000;
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_keyword
+{
+    color: #ff0;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_type
+{
+    color: #0f0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_string
+{
+    color: #abab00;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_regexp
+{
+    color: #abab00;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_specialchar
+{
+    color: #bfbfbf;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_comment
+{
+    color: #888;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_darkness .sh_sourceCode .sh_number
+{
+    color: #619de7;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_preproc
+{
+    color: #1da3cf;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_symbol
+{
+    color: #f0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_function
+{
+    color: #f34627;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_cbracket
+{
+    color: #f0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_url
+{
+    color: #abab00;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_date
+{
+    color: #ff0;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_time
+{
+    color: #ff0;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_file
+{
+    color: #ff0;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_ip
+{
+    color: #abab00;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_name
+{
+    color: #abab00;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_variable
+{
+    color: #26e0e7;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_oldfile
+{
+    color: #bfbfbf;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_newfile
+{
+    color: #abab00;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_difflines
+{
+    color: #ff0;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_selector
+{
+    color: #26e0e7;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_property
+{
+    color: #ff0;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_darkness .sh_sourceCode .sh_value
+{
+    color: #abab00;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.sh_desert
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_desert .sh_sourceCode
+{
+    background-color: #af947e;
+    color: #fffdec;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_keyword
+{
+    color: #fef8bc;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_type
+{
+    color: #fef8bc;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_string
+{
+    color: #f6f647;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_regexp
+{
+    color: #f6f647;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_specialchar
+{
+    color: #f6f647;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_comment
+{
+    color: #a00000;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_desert .sh_sourceCode .sh_number
+{
+    color: #3e3f25;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_preproc
+{
+    color: #833914;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_symbol
+{
+    color: #66574f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_function
+{
+    color: #f3d266;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_cbracket
+{
+    color: #66574f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_url
+{
+    color: #f6f647;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_date
+{
+    color: #fef8bc;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_time
+{
+    color: #fef8bc;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_file
+{
+    color: #fef8bc;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_ip
+{
+    color: #f6f647;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_name
+{
+    color: #f6f647;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_variable
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_oldfile
+{
+    color: #f6f647;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_newfile
+{
+    color: #f6f647;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_difflines
+{
+    color: #fef8bc;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_selector
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_property
+{
+    color: #fef8bc;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_desert .sh_sourceCode .sh_value
+{
+    color: #f6f647;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_dull
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_dull .sh_sourceCode
+{
+    background-color: #bfbfbf;
+    color: #656565;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_keyword
+{
+    color: #353535;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_type
+{
+    color: #3241c6;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_string
+{
+    color: #059;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_regexp
+{
+    color: #059;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_specialchar
+{
+    color: #059;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_comment
+{
+    color: #d11d20;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_dull .sh_sourceCode .sh_number
+{
+    color: #16930d;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_preproc
+{
+    color: #003;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_symbol
+{
+    color: #222;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_function
+{
+    color: #38255c;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_cbracket
+{
+    color: #222;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_url
+{
+    color: #059;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_date
+{
+    color: #353535;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_time
+{
+    color: #353535;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_file
+{
+    color: #353535;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_ip
+{
+    color: #059;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_name
+{
+    color: #059;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_variable
+{
+    color: #ae5a16;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_oldfile
+{
+    color: #059;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_newfile
+{
+    color: #059;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_difflines
+{
+    color: #353535;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_selector
+{
+    color: #ae5a16;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_property
+{
+    color: #353535;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_dull .sh_sourceCode .sh_value
+{
+    color: #059;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_easter
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_easter .sh_sourceCode
+{
+    background-color: #ffff80;
+    color: #2C7B34;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_keyword
+{
+    color: #1d45d6;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_type
+{
+    color: #ed0f55;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_string
+{
+    color: #ca4be3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_regexp
+{
+    color: #ca4be3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_specialchar
+{
+    color: #ca4be3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_comment
+{
+    color: #24c815;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_easter .sh_sourceCode .sh_number
+{
+    color: #e11a70;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_preproc
+{
+    color: #1583b1;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_symbol
+{
+    color: #fa4700;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_function
+{
+    color: #1d45d6;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_cbracket
+{
+    color: #fa4700;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_url
+{
+    color: #ca4be3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_date
+{
+    color: #1d45d6;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_time
+{
+    color: #1d45d6;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_file
+{
+    color: #1d45d6;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_ip
+{
+    color: #ca4be3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_name
+{
+    color: #ca4be3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_variable
+{
+    color: #26aae7;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_oldfile
+{
+    color: #ca4be3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_newfile
+{
+    color: #ca4be3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_difflines
+{
+    color: #1d45d6;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_selector
+{
+    color: #26aae7;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_property
+{
+    color: #1d45d6;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_easter .sh_sourceCode .sh_value
+{
+    color: #ca4be3;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_emacs
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_emacs .sh_sourceCode
+{
+    background-color: #fff;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_keyword
+{
+    color: #9c20ee;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_type
+{
+    color: #208920;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_string
+{
+    color: #bd8d8b;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_regexp
+{
+    color: #bd8d8b;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_specialchar
+{
+    color: #bd8d8b;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_comment
+{
+    color: #ac2020;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_emacs .sh_sourceCode .sh_number
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_preproc
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_function
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_url
+{
+    color: #bd8d8b;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_date
+{
+    color: #9c20ee;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_time
+{
+    color: #9c20ee;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_file
+{
+    color: #9c20ee;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_ip
+{
+    color: #bd8d8b;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_name
+{
+    color: #bd8d8b;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_variable
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_oldfile
+{
+    color: #bd8d8b;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_newfile
+{
+    color: #bd8d8b;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_difflines
+{
+    color: #9c20ee;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_selector
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_property
+{
+    color: #9c20ee;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_emacs .sh_sourceCode .sh_value
+{
+    color: #bd8d8b;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_golden
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_golden .sh_sourceCode
+{
+    background-color: #000;
+    color: #db0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_keyword
+{
+    color: #ffed8a;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_type
+{
+    color: #ffed8a;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_string
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_regexp
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_specialchar
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_comment
+{
+    color: #978345;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_golden .sh_sourceCode .sh_number
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_preproc
+{
+    color: #fda;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_symbol
+{
+    color: #ababab;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_function
+{
+    color: #db0;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_cbracket
+{
+    color: #ababab;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_url
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_date
+{
+    color: #ffed8a;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_time
+{
+    color: #ffed8a;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_file
+{
+    color: #ffed8a;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_ip
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_name
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_variable
+{
+    color: #dedede;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_oldfile
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_newfile
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_difflines
+{
+    color: #ffed8a;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_selector
+{
+    color: #dedede;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_property
+{
+    color: #ffed8a;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_golden .sh_sourceCode .sh_value
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_greenlcd
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_greenlcd .sh_sourceCode
+{
+    background-color: #003400;
+    color: #0b0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_keyword
+{
+    color: #00ed00;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_type
+{
+    color: #00ed00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_string
+{
+    color: #dfdfdf;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_regexp
+{
+    color: #dfdfdf;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_specialchar
+{
+    color: #dfdfdf;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_comment
+{
+    color: #888;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_greenlcd .sh_sourceCode .sh_number
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_preproc
+{
+    color: #bfbfbf;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_symbol
+{
+    color: #2fe7a9;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_function
+{
+    color: #c0ff73;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_cbracket
+{
+    color: #2fe7a9;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_url
+{
+    color: #dfdfdf;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_date
+{
+    color: #00ed00;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_time
+{
+    color: #00ed00;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_file
+{
+    color: #00ed00;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_ip
+{
+    color: #dfdfdf;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_name
+{
+    color: #dfdfdf;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_variable
+{
+    color: #beef13;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_oldfile
+{
+    color: #dfdfdf;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_newfile
+{
+    color: #dfdfdf;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_difflines
+{
+    color: #00ed00;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_selector
+{
+    color: #beef13;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_property
+{
+    color: #00ed00;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_greenlcd .sh_sourceCode .sh_value
+{
+    color: #dfdfdf;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_ide-anjuta
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_ide-anjuta .sh_sourceCode
+{
+    background-color: #fff;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_keyword
+{
+    color: #000080;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_type
+{
+    color: #000080;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_string
+{
+    color: #db0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_regexp
+{
+    color: #db0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_specialchar
+{
+    color: #db0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_comment
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_number
+{
+    color: #080;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_preproc
+{
+    color: #678000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_function
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_url
+{
+    color: #db0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_date
+{
+    color: #000080;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_time
+{
+    color: #000080;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_file
+{
+    color: #000080;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_ip
+{
+    color: #db0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_name
+{
+    color: #db0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_variable
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_oldfile
+{
+    color: #db0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_newfile
+{
+    color: #db0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_difflines
+{
+    color: #000080;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_selector
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_property
+{
+    color: #000080;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-anjuta .sh_sourceCode .sh_value
+{
+    color: #db0;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_ide-codewarrior
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_ide-codewarrior .sh_sourceCode
+{
+    background-color: #fff;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_keyword
+{
+    color: #0000b3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_type
+{
+    color: #4c73a6;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_string
+{
+    color: #666;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_regexp
+{
+    color: #666;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_specialchar
+{
+    color: #666;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_comment
+{
+    color: #b30000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_number
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_preproc
+{
+    color: #0000b3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_function
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_url
+{
+    color: #666;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_date
+{
+    color: #0000b3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_time
+{
+    color: #0000b3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_file
+{
+    color: #0000b3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_ip
+{
+    color: #666;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_name
+{
+    color: #666;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_variable
+{
+    color: #0000b3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_oldfile
+{
+    color: #666;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_newfile
+{
+    color: #666;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_difflines
+{
+    color: #0000b3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_selector
+{
+    color: #0000b3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_property
+{
+    color: #0000b3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-codewarrior .sh_sourceCode .sh_value
+{
+    color: #666;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_ide-devcpp
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_ide-devcpp .sh_sourceCode
+{
+    background-color: #fff;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_keyword
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_type
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_string
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_regexp
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_specialchar
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_comment
+{
+    color: #000080;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_number
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_preproc
+{
+    color: #008000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_function
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_url
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_date
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_time
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_file
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_ip
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_name
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_variable
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_oldfile
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_newfile
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_difflines
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_selector
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_property
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-devcpp .sh_sourceCode .sh_value
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_ide-eclipse
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_ide-eclipse .sh_sourceCode
+{
+    background-color: #fff;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_keyword
+{
+    color: #7f0055;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_type
+{
+    color: #7f0055;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_string
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_regexp
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_specialchar
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_comment
+{
+    color: #717ab3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_number
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_preproc
+{
+    color: #3f5fbf;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_function
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_url
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_date
+{
+    color: #7f0055;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_time
+{
+    color: #7f0055;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_file
+{
+    color: #7f0055;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_ip
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_name
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_variable
+{
+    color: #7f0055;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_oldfile
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_newfile
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_difflines
+{
+    color: #7f0055;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_selector
+{
+    color: #7f0055;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_property
+{
+    color: #7f0055;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-eclipse .sh_sourceCode .sh_value
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_ide-kdev
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_ide-kdev .sh_sourceCode
+{
+    background-color: #fff;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_keyword
+{
+    color: #600000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_type
+{
+    color: #600000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_string
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_regexp
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_specialchar
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_comment
+{
+    color: #bfbfbf;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_ide-kdev .sh_sourceCode .sh_number
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_preproc
+{
+    color: #008000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_function
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_url
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_date
+{
+    color: #600000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_time
+{
+    color: #600000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_file
+{
+    color: #600000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_ip
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_name
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_variable
+{
+    color: #600000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_oldfile
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_newfile
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_difflines
+{
+    color: #600000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_selector
+{
+    color: #600000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_property
+{
+    color: #600000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-kdev .sh_sourceCode .sh_value
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_ide-msvcpp
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_ide-msvcpp .sh_sourceCode
+{
+    background-color: #fff;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_keyword
+{
+    color: #00f;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_type
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_string
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_regexp
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_specialchar
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_comment
+{
+    color: #008000;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_number
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_preproc
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_function
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_url
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_date
+{
+    color: #00f;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_time
+{
+    color: #00f;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_file
+{
+    color: #00f;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_ip
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_name
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_variable
+{
+    color: #00f;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_oldfile
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_newfile
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_difflines
+{
+    color: #00f;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_selector
+{
+    color: #00f;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_property
+{
+    color: #00f;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_ide-msvcpp .sh_sourceCode .sh_value
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_kwrite
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_kwrite .sh_sourceCode
+{
+    background-color: #fff;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_keyword
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_type
+{
+    color: #830000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_string
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_regexp
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_specialchar
+{
+    color: #f0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_comment
+{
+    color: #838183;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_kwrite .sh_sourceCode .sh_number
+{
+    color: #2928ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_preproc
+{
+    color: #008200;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_function
+{
+    color: #010181;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_url
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_date
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_time
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_file
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_ip
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_name
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_variable
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_oldfile
+{
+    color: #f0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_newfile
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_difflines
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_selector
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_property
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_kwrite .sh_sourceCode .sh_value
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_matlab
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_matlab .sh_sourceCode
+{
+    background-color: #fff;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_keyword
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_type
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_string
+{
+    color: #800000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_regexp
+{
+    color: #800000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_specialchar
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_number
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_function
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_url
+{
+    color: #800000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_date
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_time
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_file
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_ip
+{
+    color: #800000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_name
+{
+    color: #800000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_variable
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_oldfile
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_newfile
+{
+    color: #800000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_difflines
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_selector
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_property
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_matlab .sh_sourceCode .sh_value
+{
+    color: #800000;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_navy
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_navy .sh_sourceCode
+{
+    background-color: #000035;
+    color: #008bff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_keyword
+{
+    color: #f8c50b;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_type
+{
+    color: #e1e72f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_string
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_regexp
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_specialchar
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_comment
+{
+    color: #fb0;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_navy .sh_sourceCode .sh_number
+{
+    color: #f87ff4;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_preproc
+{
+    color: #b0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_symbol
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_function
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_cbracket
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_url
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_date
+{
+    color: #f8c50b;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_time
+{
+    color: #f8c50b;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_file
+{
+    color: #f8c50b;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_ip
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_name
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_variable
+{
+    color: #13d8ef;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_oldfile
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_newfile
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_difflines
+{
+    color: #f8c50b;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_selector
+{
+    color: #13d8ef;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_property
+{
+    color: #f8c50b;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_navy .sh_sourceCode .sh_value
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_nedit
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_nedit .sh_sourceCode
+{
+    background-color: #fff;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_keyword
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_type
+{
+    color: #a52a2a;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_string
+{
+    color: #006400;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_regexp
+{
+    color: #006400;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_specialchar
+{
+    color: #2e8b57;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_comment
+{
+    color: #000;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_nedit .sh_sourceCode .sh_number
+{
+    color: #006400;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_preproc
+{
+    color: #27408b;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_symbol
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_function
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_cbracket
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_url
+{
+    color: #006400;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_date
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_time
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_file
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_ip
+{
+    color: #006400;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_name
+{
+    color: #006400;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_variable
+{
+    color: #dda0dd;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_oldfile
+{
+    color: #2e8b57;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_newfile
+{
+    color: #006400;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_difflines
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_selector
+{
+    color: #dda0dd;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_property
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_nedit .sh_sourceCode .sh_value
+{
+    color: #006400;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_neon
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_neon .sh_sourceCode
+{
+    background-color: #000;
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_keyword
+{
+    color: #0ff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_type
+{
+    color: #ff0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_string
+{
+    color: #cd00ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_regexp
+{
+    color: #cd00ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_specialchar
+{
+    color: #cd00ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_comment
+{
+    color: #0f0;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_neon .sh_sourceCode .sh_number
+{
+    color: #f0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_preproc
+{
+    color: #fb0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_symbol
+{
+    color: #ee5896;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_function
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_cbracket
+{
+    color: #ee5896;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_url
+{
+    color: #cd00ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_date
+{
+    color: #0ff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_time
+{
+    color: #0ff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_file
+{
+    color: #0ff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_ip
+{
+    color: #cd00ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_name
+{
+    color: #cd00ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_variable
+{
+    color: #ef1347;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_oldfile
+{
+    color: #cd00ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_newfile
+{
+    color: #cd00ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_difflines
+{
+    color: #0ff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_selector
+{
+    color: #ef1347;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_property
+{
+    color: #0ff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_neon .sh_sourceCode .sh_value
+{
+    color: #cd00ff;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_night
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_night .sh_sourceCode
+{
+    background-color: #004;
+    color: #d0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_keyword
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_type
+{
+    color: #f1157c;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_string
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_regexp
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_specialchar
+{
+    color: #82d66d;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_comment
+{
+    color: #bfbfbf;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_number
+{
+    color: #8ee119;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_preproc
+{
+    color: #0b0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_symbol
+{
+    color: #e7ee5c;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_function
+{
+    color: #ff06cd;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_cbracket
+{
+    color: #e7ee5c;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_url
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_date
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_time
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_file
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_ip
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_name
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_variable
+{
+    color: #7aec27;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_oldfile
+{
+    color: #82d66d;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_newfile
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_difflines
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_selector
+{
+    color: #7aec27;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_property
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_night .sh_sourceCode .sh_value
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_pablo
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_pablo .sh_sourceCode
+{
+    background-color: #000;
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_keyword
+{
+    color: #c0c000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_type
+{
+    color: #00c000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_string
+{
+    color: #0ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_regexp
+{
+    color: #0ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_specialchar
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_comment
+{
+    color: #808080;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_number
+{
+    color: #0ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_preproc
+{
+    color: #0f0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_symbol
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_function
+{
+    color: #ff22b9;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_cbracket
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_url
+{
+    color: #0ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_date
+{
+    color: #c0c000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_time
+{
+    color: #c0c000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_file
+{
+    color: #c0c000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_ip
+{
+    color: #0ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_name
+{
+    color: #0ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_variable
+{
+    color: #0000c0;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_oldfile
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_newfile
+{
+    color: #0ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_difflines
+{
+    color: #c0c000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_selector
+{
+    color: #0000c0;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_property
+{
+    color: #c0c000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_pablo .sh_sourceCode .sh_value
+{
+    color: #0ff;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_peachpuff
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_peachpuff .sh_sourceCode
+{
+    background-color: #ffdab9;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_keyword
+{
+    color: #a52a2a;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_type
+{
+    color: #2e8b57;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_string
+{
+    color: #c00058;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_regexp
+{
+    color: #c00058;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_specialchar
+{
+    color: #6a5acd;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_comment
+{
+    color: #406090;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_number
+{
+    color: #c00058;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_preproc
+{
+    color: #cd00cd;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_function
+{
+    color: #521cc7;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_url
+{
+    color: #c00058;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_date
+{
+    color: #a52a2a;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_time
+{
+    color: #a52a2a;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_file
+{
+    color: #a52a2a;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_ip
+{
+    color: #c00058;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_name
+{
+    color: #c00058;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_variable
+{
+    color: #275fec;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_oldfile
+{
+    color: #6a5acd;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_newfile
+{
+    color: #c00058;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_difflines
+{
+    color: #a52a2a;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_selector
+{
+    color: #275fec;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_property
+{
+    color: #a52a2a;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_peachpuff .sh_sourceCode .sh_value
+{
+    color: #c00058;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_print
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_print .sh_sourceCode
+{
+    background-color: #fff;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_keyword
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_type
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_string
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_regexp
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_specialchar
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_comment
+{
+    color: #666;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_print .sh_sourceCode .sh_number
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_preproc
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_symbol
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_cbracket
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_url
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_date
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_time
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_file
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_ip
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_name
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_variable
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_oldfile
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_newfile
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_difflines
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_selector
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_property
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_print .sh_sourceCode .sh_value
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_rand01
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_rand01 .sh_sourceCode
+{
+    background-color: #fff;
+    color: #121b28;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_keyword
+{
+    color: #0a7f6d;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_type
+{
+    color: #c42638;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_string
+{
+    color: #2b83ba;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_regexp
+{
+    color: #2b83ba;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_specialchar
+{
+    color: #a764cb;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_comment
+{
+    color: #ababab;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_rand01 .sh_sourceCode .sh_number
+{
+    color: #0da344;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_preproc
+{
+    color: #620ac6;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_symbol
+{
+    color: #0000de;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_function
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_cbracket
+{
+    color: #0000de;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_url
+{
+    color: #2b83ba;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_date
+{
+    color: #0a7f6d;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_time
+{
+    color: #0a7f6d;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_file
+{
+    color: #0a7f6d;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_ip
+{
+    color: #2b83ba;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_name
+{
+    color: #2b83ba;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_variable
+{
+    color: #e12f76;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_oldfile
+{
+    color: #a764cb;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_newfile
+{
+    color: #2b83ba;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_difflines
+{
+    color: #0a7f6d;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_selector
+{
+    color: #e12f76;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_property
+{
+    color: #0a7f6d;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_rand01 .sh_sourceCode .sh_value
+{
+    color: #2b83ba;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_the
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_the .sh_sourceCode
+{
+    background-color: #fff;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_keyword
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_type
+{
+    color: #808;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_string
+{
+    color: #008;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_regexp
+{
+    color: #008;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_specialchar
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_comment
+{
+    color: #0f0;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_the .sh_sourceCode .sh_number
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_preproc
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_function
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_url
+{
+    color: #008;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_date
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_time
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_file
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_ip
+{
+    color: #008;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_name
+{
+    color: #008;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_variable
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_oldfile
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_newfile
+{
+    color: #008;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_difflines
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_selector
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_property
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_the .sh_sourceCode .sh_value
+{
+    color: #008;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_typical
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_typical .sh_sourceCode
+{
+    background-color: #fff;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_keyword
+{
+    color: #00f;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_type
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_string
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_regexp
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_specialchar
+{
+    color: #C42DA8;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_comment
+{
+    color: #666;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_typical .sh_sourceCode .sh_number
+{
+    color: #a900a9;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_preproc
+{
+    color: #00b800;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_symbol
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_function
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_cbracket
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_url
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_date
+{
+    color: #00f;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_time
+{
+    color: #00f;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_file
+{
+    color: #00f;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_ip
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_name
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_variable
+{
+    color: #ec7f15;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_oldfile
+{
+    color: #C42DA8;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_newfile
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_difflines
+{
+    color: #00f;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_selector
+{
+    color: #ec7f15;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_property
+{
+    color: #00f;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_typical .sh_sourceCode .sh_value
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_vampire
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_vampire .sh_sourceCode
+{
+    background-color: #000;
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_keyword
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_type
+{
+    color: #F35E1E;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_string
+{
+    color: #b0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_regexp
+{
+    color: #b0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_specialchar
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_comment
+{
+    color: #ababab;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_vampire .sh_sourceCode .sh_number
+{
+    color: #b0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_preproc
+{
+    color: #ababab;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_symbol
+{
+    color: #F3E651;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_function
+{
+    color: #7bc710;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_cbracket
+{
+    color: #F3E651;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_url
+{
+    color: #b0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_date
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_time
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_file
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_ip
+{
+    color: #b0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_name
+{
+    color: #b0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_variable
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_oldfile
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_newfile
+{
+    color: #b0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_difflines
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_selector
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_property
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_vampire .sh_sourceCode .sh_value
+{
+    color: #b0f;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_vim-dark
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_vim-dark .sh_sourceCode
+{
+    background-color: #000;
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_keyword
+{
+    color: #B26818;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_type
+{
+    color: #0f0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_string
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_regexp
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_specialchar
+{
+    color: #f2f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_comment
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_number
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_preproc
+{
+    color: #f2f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_function
+{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_url
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_date
+{
+    color: #B26818;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_time
+{
+    color: #B26818;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_file
+{
+    color: #B26818;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_ip
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_name
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_variable
+{
+    color: #B26818;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_oldfile
+{
+    color: #f2f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_newfile
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_difflines
+{
+    color: #B26818;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_selector
+{
+    color: #B26818;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_property
+{
+    color: #B26818;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim-dark .sh_sourceCode .sh_value
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_vim
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_vim .sh_sourceCode
+{
+    background-color: #fff;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_keyword
+{
+    color: #B26818;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_type
+{
+    color: #0f0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_string
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_regexp
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_specialchar
+{
+    color: #f2f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_comment
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_number
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_preproc
+{
+    color: #f2f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_function
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_url
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_date
+{
+    color: #B26818;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_time
+{
+    color: #B26818;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_file
+{
+    color: #B26818;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_ip
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_name
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_variable
+{
+    color: #B26818;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_oldfile
+{
+    color: #f2f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_newfile
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_difflines
+{
+    color: #B26818;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_selector
+{
+    color: #B26818;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_property
+{
+    color: #B26818;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_vim .sh_sourceCode .sh_value
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_whatis
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_whatis .sh_sourceCode
+{
+    background-color: #000;
+    color: #0f0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_keyword
+{
+    color: #fa5a03;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_type
+{
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_string
+{
+    color: #fb0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_regexp
+{
+    color: #fb0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_specialchar
+{
+    color: #fb0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_comment
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_number
+{
+    color: #ff0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_preproc
+{
+    color: #bfbfbf;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_symbol
+{
+    color: #0ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_function
+{
+    color: #e721d3;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_cbracket
+{
+    color: #0ff;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_url
+{
+    color: #fb0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_date
+{
+    color: #fa5a03;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_time
+{
+    color: #fa5a03;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_file
+{
+    color: #fa5a03;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_ip
+{
+    color: #fb0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_name
+{
+    color: #fb0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_variable
+{
+    color: #efe219;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_oldfile
+{
+    color: #fb0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_newfile
+{
+    color: #fb0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_difflines
+{
+    color: #fa5a03;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_selector
+{
+    color: #efe219;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_property
+{
+    color: #fa5a03;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_whatis .sh_sourceCode .sh_value
+{
+    color: #fb0;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_whitengrey
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_whitengrey .sh_sourceCode
+{
+    background-color: #fff;
+    color: #696969;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_keyword
+{
+    color: #696969;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_type
+{
+    color: #696969;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_string
+{
+    color: #080;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_regexp
+{
+    color: #080;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_specialchar
+{
+    color: #080;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_comment
+{
+    color: #1326a2;
+    font-weight: normal;
+    font-style: italic;
+}
+.sh_whitengrey .sh_sourceCode .sh_number
+{
+    color: #b0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_preproc
+{
+    color: #470000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_function
+{
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_url
+{
+    color: #080;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_date
+{
+    color: #696969;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_time
+{
+    color: #696969;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_file
+{
+    color: #696969;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_ip
+{
+    color: #080;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_name
+{
+    color: #080;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_variable
+{
+    color: #696969;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_oldfile
+{
+    color: #080;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_newfile
+{
+    color: #080;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_difflines
+{
+    color: #696969;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_selector
+{
+    color: #696969;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_property
+{
+    color: #696969;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_whitengrey .sh_sourceCode .sh_value
+{
+    color: #080;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sh_zellner
+{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.sh_zellner .sh_sourceCode
+{
+    background-color: #fff;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_keyword
+{
+    color: #a52a2a;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_type
+{
+    color: #00f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_string
+{
+    color: #f0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_regexp
+{
+    color: #f0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_specialchar
+{
+    color: #f0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_comment
+{
+    color: #f00;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_number
+{
+    color: #f0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_preproc
+{
+    color: #a020f0;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_function
+{
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_url
+{
+    color: #f0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_date
+{
+    color: #a52a2a;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_time
+{
+    color: #a52a2a;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_file
+{
+    color: #a52a2a;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_ip
+{
+    color: #f0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_name
+{
+    color: #f0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_variable
+{
+    color: #225f2d;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_oldfile
+{
+    color: #f0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_newfile
+{
+    color: #f0f;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_difflines
+{
+    color: #a52a2a;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_selector
+{
+    color: #225f2d;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_property
+{
+    color: #a52a2a;
+    font-weight: normal;
+    font-style: normal;
+}
+.sh_zellner .sh_sourceCode .sh_value
+{
+    color: #f0f;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.snippet-wrap
+{
+    position: relative;
+}
+*:first-child + html .snippet-wrap
+{
+    display: inline-block;
+}
+* html .snippet-wrap
+{
+    display: inline-block;
+}
+.snippet-reveal
+{
+    text-decoration: underline;
+}
+.snippet-wrap .snippet-menu, .snippet-wrap .snippet-hide
+{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: .9em;
+    z-index: 1;
+    background-color: transparent;
+}
+.snippet-wrap .snippet-hide
+{
+    top: auto;
+    bottom: 10px;
+}
+*:first-child + html .snippet-wrap .snippet-hide
+{
+    bottom: 25px;
+}
+* html .snippet-wrap .snippet-hide
+{
+    bottom: 25px;
+}
+.snippet-wrap .snippet-menu pre, .snippet-wrap .snippet-hide pre
+{
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+.snippet-wrap .snippet-menu a, .snippet-wrap .snippet-hide a
+{
+    padding: 0 5px;
+    text-decoration: underline;
+}
+.snippet-wrap pre.sh_sourceCode
+{
+    padding: 1em;
+    line-height: 1.8em;
+    overflow: auto;
+    position: relative;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #000;
+    -moz-box-shadow: 2px 2px 5px #000;
+    -webkit-box-shadow: 2px 2px 5px #000;
+}
+.snippet-wrap pre.snippet-textonly
+{
+    padding: 2em;
+}
+*:first-child + html .snippet-wrap pre.snippet-formatted
+{
+    padding: 2em 1em;
+}
+* html .snippet-wrap pre.snippet-formatted
+{
+    padding: 2em 1em;
+}
+.snippet-reveal pre.sh_sourceCode
+{
+    padding: .5em 1em;
+    text-align: right;
+}
+.snippet-wrap .snippet-num li
+{
+    padding-left: 1.5em;
+}
+.snippet-wrap .snippet-no-num
+{
+    list-style: none;
+    padding: .6em 1em;
+    margin: 0;
+}
+.snippet-wrap .snippet-no-num li
+{
+    list-style: none;
+    padding-left: 0;
+}
+.snippet-wrap .snippet-num
+{
+    margin: 1em 0 1em 1em;
+    padding-left: 3em;
+}
+.snippet-wrap .snippet-num li
+{
+    list-style: decimal-leading-zero outside none;
+}
+.snippet-wrap .snippet-no-num li.box
+{
+    padding: 0 6px;
+    margin-left: -6px;
+}
+.snippet-wrap .snippet-num li.box
+{
+    border: 1px solid;
+    list-style-position: inside;
+    margin-left: -3em;
+    padding-left: 6px;
+}
+*:first-child + html .snippet-wrap .snippet-num li.box
+{
+    margin-left: -2.4em;
+}
+* html .snippet-wrap .snippet-num li.box
+{
+    margin-left: -2.4em;
+}
+.snippet-wrap li.box-top
+{
+    border-width: 1px 1px 0 !important;
+}
+.snippet-wrap li.box-bot
+{
+    border-width: 0 1px 1px !important;
+}
+.snippet-wrap li.box-mid
+{
+    border-width: 0 1px !important;
+}
+.snippet-wrap .snippet-num li .box-sp
+{
+    width: 18px;
+    display: inline-block;
+}
+*:first-child + html .snippet-wrap .snippet-num li .box-sp
+{
+    width: 27px;
+}
+* html .snippet-wrap .snippet-num li .box-sp
+{
+    width: 27px;
+}
+.snippet-wrap .snippet-no-num li.box
+{
+    border: 1px solid;
+}
+.snippet-wrap .snippet-no-num li .box-sp
+{
+    display: none;
+}
+</style>
+  
+<style id="savepage-cssvariables">
+  :root {
+  }
+</style>
+<script id="savepage-shadowloader" type="application/javascript">
+  "use strict";
+  window.addEventListener("DOMContentLoaded",
+  function(event) {
+    savepage_ShadowLoader(5);
+  },false);
+  function savepage_ShadowLoader(c){createShadowDOMs(0,document.documentElement);function createShadowDOMs(a,b){var i;if(b.localName=="iframe"||b.localName=="frame"){if(a<c){try{if(b.contentDocument.documentElement!=null){createShadowDOMs(a+1,b.contentDocument.documentElement)}}catch(e){}}}else{if(b.children.length>=1&&b.children[0].localName=="template"&&b.children[0].hasAttribute("data-savepage-shadowroot")){b.attachShadow({mode:"open"}).appendChild(b.children[0].content);b.removeChild(b.children[0]);for(i=0;i<b.shadowRoot.children.length;i++)if(b.shadowRoot.children[i]!=null)createShadowDOMs(a,b.shadowRoot.children[i])}for(i=0;i<b.children.length;i++)if(b.children[i]!=null)createShadowDOMs(a,b.children[i])}}}
+</script>
+<meta name="savepage-url" content="http://tts.tmooc.cn/ttsPage/LINUX/NSDTN202001/ADMIN/DAY05/CASE/01/index.html">
+<meta name="savepage-title" content="CASE">
+<meta name="savepage-from" content="http://tts.tmooc.cn/ttsPage/LINUX/NSDTN202001/ADMIN/DAY05/CASE/01/index.html">
+<meta name="savepage-date" content="Thu Dec 24 2020 19:51:17 GMT+0800 (中国标准时间)">
+<meta name="savepage-state" content="Standard Items; Retain cross-origin frames; Merge CSS images; Remove unsaved URLs; Max frame depth = 5; Max resource size = 50MB; Max resource time = 10s;">
+<meta name="savepage-version" content="24.0">
+<meta name="savepage-comments" content="">
+  </head>
+  <body>
+    <div class="source_style_case">
+      <a name="page_top_case" id="top_anchor">
+      </a><a id="link_top" href="#page_top_case">Top</a>
+      <h1>NSD ADMIN DAY05</h1>
+      <a name="case1">
+      </a>
+      <h2>1 案例1：查询已安装的软件信息</h2>
+      <h3>1.1 问题</h3>
+      <ol class="list">
+        <li>列出当前主机已安装的所有RPM软件
+</li>
+        <li>查看firefox软件包的安装清单
+</li>
+        <li>查询ifconfig命令程序是安装哪个软件包后产生的
+</li>
+        <li>查看firefox软件包的用途
+</li>
+      </ol>
+      <h3>1.2 方案</h3>
+      <p>查询所有已安装的rpm包，可以利用命令rpm  -qa。</p>
+      <p>查询一个软件安装清单，可以利用命令rpm  -ql  软件名。</p>
+      <p>查询一个文件是由哪个软件包安装后产生，可以利用命令rpm  -qf  文件绝对路径。本题中首先要找到，ifconfig命令的可执行程序在哪里，可以利用which命令。</p>
+      <p>查看软件的用途，可以利用命令rpm  -qi  软件名。</p>
+      <h3>1.3 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：列出当前主机已安装的所有RPM软件</p>
+      <p>命令操作如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="#" style="display: none;">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># rpm <span class="sh_symbol">-</span>qa</li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">[root@localhost ~]# rpm -qa
+</pre></div></div>
+      <p class="number">步骤二：查看firefox软件包的安装清单</p>
+      <p>命令操作如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="#" style="display: none;">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># rpm <span class="sh_symbol">-</span>ql firefox</li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">[root@localhost ~]# rpm -ql firefox
+</pre></div></div>
+      <p class="number">步骤三：查询ifconfig命令程序是安装哪个软件包后产生的</p>
+      <p>命令操作如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="#" style="display: none;">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># which ifconfig    #查询命令所对应的程序</li><li><span class="sh_regexp">/sbin/i</span>fconfig</li><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># rpm <span class="sh_symbol">-</span><span class="sh_normal">qf </span><span class="sh_symbol">/</span><span class="sh_normal">sbin</span><span class="sh_symbol">/</span>ifconfig</li><li>net<span class="sh_symbol">-</span>tools<span class="sh_number">-1.60-110</span><span class="sh_symbol">.</span>el6_2<span class="sh_symbol">.</span>x86_64</li><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span>#</li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">[root@localhost ~]# which ifconfig    #查询命令所对应的程序
+/sbin/ifconfig
+[root@localhost ~]# rpm -qf /sbin/ifconfig
+net-tools-1.60-110.el6_2.x86_64
+[root@localhost ~]#
+</pre></div></div>
+      <p class="number">步骤四：查看firefox软件包的用途</p>
+      <p>命令操作如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="#" style="display: none;">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># rpm <span class="sh_symbol">-</span>qi firefox</li><li>Name        <span class="sh_symbol">:</span> firefox                      Relocations<span class="sh_symbol">:</span> <span class="sh_symbol">(</span>not relocatable<span class="sh_symbol">)</span></li><li>Version     <span class="sh_symbol">:</span> <span class="sh_number">17.0.10</span>                           Vendor<span class="sh_symbol">:</span> Red Hat<span class="sh_symbol">,</span> Inc<span class="sh_symbol">.</span></li><li>Release     <span class="sh_symbol">:</span> <span class="sh_number">1</span><span class="sh_symbol">.</span>el6_4                       Build <span class="sh_predef_func">Date</span><span class="sh_symbol">:</span> <span class="sh_number">2013</span>年<span class="sh_number">10</span>月<span class="sh_number">23</span>日 星期三 <span class="sh_number">21</span>时<span class="sh_number">14</span>分<span class="sh_number">43</span>秒</li><li>Install <span class="sh_predef_func">Date</span><span class="sh_symbol">:</span> <span class="sh_number">2015</span>年<span class="sh_number">01</span>月<span class="sh_number">06</span>日 星期二 <span class="sh_number">20</span>时<span class="sh_number">59</span>分<span class="sh_number">04</span>秒      Build Host<span class="sh_symbol">:</span> x86<span class="sh_number">-027</span><span class="sh_symbol">.</span>build<span class="sh_symbol">.</span>eng<span class="sh_symbol">.</span>bos<span class="sh_symbol">.</span>redhat<span class="sh_symbol">.</span>com</li><li>Group       <span class="sh_symbol">:</span> <span class="sh_normal">Applications</span><span class="sh_symbol">/</span>Internet         Source RPM<span class="sh_symbol">:</span> firefox<span class="sh_number">-17.0.10-1</span><span class="sh_symbol">.</span>el6_4<span class="sh_symbol">.</span>src<span class="sh_symbol">.</span>rpm</li><li>Size        <span class="sh_symbol">:</span> <span class="sh_number">30424459</span>                         License<span class="sh_symbol">:</span> MPLv1<span class="sh_number">.1</span> or GPLv2<span class="sh_symbol">+</span> or LGPLv2<span class="sh_symbol">+</span></li><li>Signature   <span class="sh_symbol">:</span> <span class="sh_normal">RSA</span><span class="sh_symbol">/</span><span class="sh_number">8</span><span class="sh_symbol">,</span> <span class="sh_number">2013</span>年<span class="sh_number">10</span>月<span class="sh_number">29</span>日 星期二 <span class="sh_number">16</span>时<span class="sh_number">20</span>分<span class="sh_number">45</span>秒<span class="sh_symbol">,</span> Key ID 199e2f91fd431d51</li><li>Packager    <span class="sh_symbol">:</span> Red Hat<span class="sh_symbol">,</span> Inc<span class="sh_symbol">.</span> <span class="sh_symbol">&lt;</span>http<span class="sh_symbol">:</span><span class="sh_comment">//bugzilla.redhat.com/bugzilla&gt;</span></li><li>URL         <span class="sh_symbol">:</span> http<span class="sh_symbol">:</span><span class="sh_comment">//www.mozilla.org/projects/firefox/</span></li><li>Summary     <span class="sh_symbol">:</span> Mozilla Firefox Web browser</li><li>Description <span class="sh_symbol">:</span></li><li>Mozilla Firefox is an open<span class="sh_symbol">-</span>source web browser<span class="sh_symbol">,</span> designed <span class="sh_keyword">for</span> standards</li><li>compliance<span class="sh_symbol">,</span> performance and portability<span class="sh_symbol">.</span></li><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span>#</li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">[root@localhost ~]# rpm -qi firefox
+Name        : firefox                      Relocations: (not relocatable)
+Version     : 17.0.10                           Vendor: Red Hat, Inc.
+Release     : 1.el6_4                       Build Date: 2013年10月23日 星期三 21时14分43秒
+Install Date: 2015年01月06日 星期二 20时59分04秒      Build Host: x86-027.build.eng.bos.redhat.com
+Group       : Applications/Internet         Source RPM: firefox-17.0.10-1.el6_4.src.rpm
+Size        : 30424459                         License: MPLv1.1 or GPLv2+ or LGPLv2+
+Signature   : RSA/8, 2013年10月29日 星期二 16时20分45秒, Key ID 199e2f91fd431d51
+Packager    : Red Hat, Inc. &lt;http://bugzilla.redhat.com/bugzilla&gt;
+URL         : http://www.mozilla.org/projects/firefox/
+Summary     : Mozilla Firefox Web browser
+Description :
+Mozilla Firefox is an open-source web browser, designed for standards
+compliance, performance and portability.
+[root@localhost ~]#
+</pre></div></div>
+      <a name="case2">
+      </a>
+      <h2>2 案例2：查询待安装的.rpm包</h2>
+      <h3>2.1 问题</h3>
+      <ol class="list">
+        <li>查询光盘中的 lynx 软件包的用途、安装清单
+</li>
+        <li>查询光盘中的 wireshark 软件包的用途、安装清单
+</li>
+      </ol>
+      <h3>2.2 方案</h3>
+      <p>注意在查询未安装的.rpm包信息时，提供的命令参数应该是准确的包文件路径，仅指定软件名是不行的。指定文件路径时，多利用Tab键补全。提前将RHEL6系统光盘挂载到/media目录，以便使用相关包文件。</p>
+      <h3>2.3 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：查询光盘中的 lynx 软件包的用途、安装清单</p>
+      <p>首先将光盘设备手动挂载到/media目录，进行查询操作。</p>
+      <p>命令操作如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="#" style="display: none;">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># <span class="sh_normal">mount </span><span class="sh_symbol">/</span><span class="sh_normal">dev</span><span class="sh_symbol">/</span><span class="sh_normal">cdrom </span><span class="sh_symbol">/</span><span class="sh_normal">media</span><span class="sh_symbol">/</span></li><li>mount<span class="sh_symbol">:</span> block <span class="sh_normal">device </span><span class="sh_symbol">/</span><span class="sh_normal">dev</span><span class="sh_symbol">/</span>sr0 is write<span class="sh_symbol">-</span><span class="sh_keyword">protected</span><span class="sh_symbol">,</span> mounting read<span class="sh_symbol">-</span>only</li><li><span style="display:none;"> </span></li><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># mount <span class="sh_symbol">|</span> tail <span class="sh_symbol">-</span><span class="sh_number">1</span></li><li><span class="sh_regexp">/dev/</span>sr0 <span class="sh_normal">on </span><span class="sh_symbol">/</span>media type <span class="sh_function">iso9660</span> <span class="sh_symbol">(</span>ro<span class="sh_symbol">)</span></li><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># rpm <span class="sh_symbol">-</span><span class="sh_normal">qpi </span><span class="sh_symbol">/</span><span class="sh_normal">media</span><span class="sh_symbol">/</span><span class="sh_normal">Packages</span><span class="sh_symbol">/</span>lynx<span class="sh_number">-2.8.8-0.3</span><span class="sh_symbol">.</span>dev15<span class="sh_symbol">.</span>el7<span class="sh_symbol">.</span>x86_64<span class="sh_symbol">.</span>rpm </li><li>……</li><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># rpm <span class="sh_symbol">-</span><span class="sh_normal">qpl </span><span class="sh_symbol">/</span><span class="sh_normal">media</span><span class="sh_symbol">/</span><span class="sh_normal">Packages</span><span class="sh_symbol">/</span>lynx<span class="sh_number">-2.8.8-0.3</span><span class="sh_symbol">.</span>dev15<span class="sh_symbol">.</span>el7<span class="sh_symbol">.</span>x86_64<span class="sh_symbol">.</span>rpm</li><li>……</li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">[root@localhost ~]# mount /dev/cdrom /media/
+mount: block device /dev/sr0 is write-protected, mounting read-only
+
+[root@localhost ~]# mount | tail -1
+/dev/sr0 on /media type iso9660 (ro)
+[root@localhost ~]# rpm -qpi /media/Packages/lynx-2.8.8-0.3.dev15.el7.x86_64.rpm 
+……
+[root@localhost ~]# rpm -qpl /media/Packages/lynx-2.8.8-0.3.dev15.el7.x86_64.rpm
+……
+</pre></div></div>
+      <p class="number">步骤二：查询光盘中的 wireshark 软件包的用途、安装清单</p>
+      <p>命令操作如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="#" style="display: none;">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># rpm <span class="sh_symbol">-</span><span class="sh_normal">qpi </span><span class="sh_symbol">/</span><span class="sh_normal">media</span><span class="sh_symbol">/</span><span class="sh_normal">Packages</span><span class="sh_symbol">/</span>wireshark<span class="sh_number">-1.10.14-14</span><span class="sh_symbol">.</span>el7<span class="sh_symbol">.</span>x86_64<span class="sh_symbol">.</span>rpm</li><li>……</li><li><span style="display:none;"> </span></li><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># rpm <span class="sh_symbol">-</span><span class="sh_normal">qpl </span><span class="sh_symbol">/</span><span class="sh_normal">media</span><span class="sh_symbol">/</span><span class="sh_normal">Packages</span><span class="sh_symbol">/</span>wireshark<span class="sh_number">-1.10.14-14</span><span class="sh_symbol">.</span>el7<span class="sh_symbol">.</span>x86_64<span class="sh_symbol">.</span>rpm</li><li>……</li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">[root@localhost ~]# rpm -qpi /media/Packages/wireshark-1.10.14-14.el7.x86_64.rpm
+……
+ 
+[root@localhost ~]# rpm -qpl /media/Packages/wireshark-1.10.14-14.el7.x86_64.rpm
+……
+</pre></div></div>
+      <a name="case3">
+      </a>
+      <h2>3 案例3：RPM软件的安装和卸载</h2>
+      <h3>3.1 问题</h3>
+      <ol class="list">
+        <li>找出vim、vi是由哪两个包产生的
+</li>
+        <li>删除vim、vi命令程序
+</li>
+        <li>修复vim、vi
+</li>
+        <li>安装bind-chroot包,体验Linux依赖关系
+</li>
+      </ol>
+      <h3>3.2 方案</h3>
+      <p>本题的思路是，首相通过which命令查找到vim、vi命令可执行程序所在位置，在通过“rpm –qf 文件绝对路径”命令查看该可执行程序，是由那个包产生的。删除该可执行程序后，再将软件包安装重新产生即可。但在安装时需注意，系统会提示改程序已经安装，需加上“—force”选项强制安装。</p>
+      <h3>3.3 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：找出vim、vi是由那两个包产生的</p>
+      <p>命令操作如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="#" style="display: none;">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># which vi  vim</li><li><span class="sh_regexp">/usr/</span><span class="sh_normal">bin</span><span class="sh_symbol">/</span>vi</li><li><span class="sh_regexp">/usr/</span><span class="sh_normal">bin</span><span class="sh_symbol">/</span>vim </li><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># rpm <span class="sh_symbol">-</span><span class="sh_normal">qf </span><span class="sh_symbol">/</span><span class="sh_normal">usr</span><span class="sh_symbol">/</span><span class="sh_normal">bin</span><span class="sh_symbol">/</span>vi</li><li>vim<span class="sh_symbol">-</span>minimal<span class="sh_number">-7.4.160-4</span><span class="sh_symbol">.</span>el7<span class="sh_symbol">.</span>x86_64 </li><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># rpm <span class="sh_symbol">-</span><span class="sh_normal">qf </span><span class="sh_symbol">/</span><span class="sh_normal">usr</span><span class="sh_symbol">/</span><span class="sh_normal">bin</span><span class="sh_symbol">/</span>vim</li><li>vim<span class="sh_symbol">-</span>enhanced<span class="sh_number">-7.4.160-4</span><span class="sh_symbol">.</span>el7<span class="sh_symbol">.</span>x86_64</li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">[root@localhost ~]# which vi  vim
+/usr/bin/vi
+/usr/bin/vim 
+[root@localhost ~]# rpm -qf /usr/bin/vi
+vim-minimal-7.4.160-4.el7.x86_64 
+[root@localhost ~]# rpm -qf /usr/bin/vim
+vim-enhanced-7.4.160-4.el7.x86_64
+</pre></div></div>
+      <p class="number">步骤二：删除vim、vi命令程序</p>
+      <p>命令操作如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="#" style="display: none;">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># rm <span class="sh_symbol">-</span><span class="sh_normal">rf </span><span class="sh_symbol">/</span><span class="sh_normal">usr</span><span class="sh_symbol">/</span><span class="sh_normal">bin</span><span class="sh_symbol">/</span><span class="sh_normal">vi </span><span class="sh_symbol">/</span><span class="sh_normal">usr</span><span class="sh_symbol">/</span><span class="sh_normal">bin</span><span class="sh_symbol">/</span>vim</li><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span>#</li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">[root@localhost ~]# rm -rf /usr/bin/vi /usr/bin/vim
+[root@localhost ~]#
+</pre></div></div>
+      <p class="number">步骤三：修复vim、vi</p>
+      <p>首先将光盘设备手动挂载到/media目录，进行修复操作。</p>
+      <p>命令操作如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="#" style="display: none;">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># <span class="sh_normal">mount </span><span class="sh_symbol">/</span><span class="sh_normal">dev</span><span class="sh_symbol">/</span><span class="sh_normal">cdrom </span><span class="sh_symbol">/</span><span class="sh_normal">media</span><span class="sh_symbol">/</span></li><li>mount<span class="sh_symbol">:</span> block <span class="sh_normal">device </span><span class="sh_symbol">/</span><span class="sh_normal">dev</span><span class="sh_symbol">/</span>sr0 is write<span class="sh_symbol">-</span><span class="sh_keyword">protected</span><span class="sh_symbol">,</span> mounting read<span class="sh_symbol">-</span>only</li><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># rpm <span class="sh_symbol">-</span>ivh <span class="sh_symbol">--</span><span class="sh_normal">force </span><span class="sh_symbol">/</span><span class="sh_normal">media</span><span class="sh_symbol">/</span><span class="sh_normal">Packages</span><span class="sh_symbol">/</span>vim<span class="sh_symbol">-</span>minimal<span class="sh_number">-7.4.160-4</span><span class="sh_symbol">.</span>el7<span class="sh_symbol">.</span>x86_64……</li><li><span style="display:none;"> </span></li><li> <span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># rpm <span class="sh_symbol">-</span>ivh <span class="sh_symbol">--</span><span class="sh_normal">force </span><span class="sh_symbol">/</span><span class="sh_normal">media</span><span class="sh_symbol">/</span><span class="sh_normal">Packages</span><span class="sh_symbol">/</span>vim<span class="sh_symbol">-</span>enhanced<span class="sh_number">-7.4.160-4</span><span class="sh_symbol">.</span>el7<span class="sh_symbol">.</span>x86_64</li><li>……</li><li> <span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span>#</li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">[root@localhost ~]# mount /dev/cdrom /media/
+mount: block device /dev/sr0 is write-protected, mounting read-only
+[root@localhost ~]# rpm -ivh --force /media/Packages/vim-minimal-7.4.160-4.el7.x86_64……
+
+ [root@localhost ~]# rpm -ivh --force /media/Packages/vim-enhanced-7.4.160-4.el7.x86_64
+……
+ [root@localhost ~]#
+</pre></div></div>
+      <p class="number">步骤四：安装bind-chroot包,体验Linux依赖关系</p>
+      <p>命令操作如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="#" style="display: none;">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># <span class="sh_normal">cd  </span><span class="sh_symbol">/</span><span class="sh_normal">media</span><span class="sh_symbol">/</span>Packages</li><li><span class="sh_symbol">[</span>root@svr5 Packages<span class="sh_symbol">]</span># rpm  <span class="sh_symbol">-</span>ivh  bind<span class="sh_symbol">-</span>chroot<span class="sh_number">-9.9.4-61</span><span class="sh_symbol">.</span>el7<span class="sh_symbol">.</span>x86_64<span class="sh_symbol">.</span>rpm </li><li>error<span class="sh_symbol">:</span> Failed dependencies<span class="sh_symbol">:</span></li><li>……</li><li><span style="display:none;"> </span></li><li> <span class="sh_symbol">[</span>root@svr5 Packages<span class="sh_symbol">]</span># rpm  <span class="sh_symbol">-</span>ivh  bind<span class="sh_number">-9.9.4-61</span><span class="sh_symbol">.</span>el7<span class="sh_symbol">.</span>x86_64<span class="sh_symbol">.</span>rpm </li><li>Preparing<span class="sh_symbol">...</span>                ########################################### <span class="sh_symbol">[</span><span class="sh_number">100</span><span class="sh_symbol">%]</span></li><li>   <span class="sh_number">1</span><span class="sh_symbol">:</span>bind                   ########################################### <span class="sh_symbol">[</span><span class="sh_number">100</span><span class="sh_symbol">%]</span></li><li><span class="sh_symbol">[</span>root@svr5 Packages<span class="sh_symbol">]</span># rpm  <span class="sh_symbol">-</span>ivh  bind<span class="sh_symbol">-</span>chroot<span class="sh_number">-9.9.4-61</span><span class="sh_symbol">.</span>el7<span class="sh_symbol">.</span>x86_64<span class="sh_symbol">.</span>rpm </li><li>Preparing<span class="sh_symbol">...</span>                ########################################### <span class="sh_symbol">[</span><span class="sh_number">100</span><span class="sh_symbol">%]</span></li><li>   <span class="sh_number">1</span><span class="sh_symbol">:</span>bind<span class="sh_symbol">-</span>chroot            ########################################### <span class="sh_symbol">[</span><span class="sh_number">100</span><span class="sh_symbol">%]</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">[root@localhost ~]# cd  /media/Packages
+[root@svr5 Packages]# rpm  -ivh  bind-chroot-9.9.4-61.el7.x86_64.rpm 
+error: Failed dependencies:
+……
+
+ [root@svr5 Packages]# rpm  -ivh  bind-9.9.4-61.el7.x86_64.rpm 
+Preparing...                ########################################### [100%]
+   1:bind                   ########################################### [100%]
+[root@svr5 Packages]# rpm  -ivh  bind-chroot-9.9.4-61.el7.x86_64.rpm 
+Preparing...                ########################################### [100%]
+   1:bind-chroot            ########################################### [100%]
+</pre></div></div>
+      <a name="case4">
+      </a>
+      <h2>4 案例4：配置Yum仓库及客户端及验证</h2>
+      <h3>4.1 问题</h3>
+      <ol class="list">
+        <li>将光盘挂载到/dvd，搭建本地Yum
+</li>
+        <li>将本机设置为客户端，进行Yum验证
+</li>
+        <li>查询Yum库中是否有firefox包
+</li>
+        <li>使用yum命令安装bind包
+</li>
+        <li>利用Yum安装bind
+</li>
+        <li>利用Yum卸载bind
+</li>
+        <li>利用yum search查询与httpd相关的包
+</li>
+        <li>利用yum info查询firefox包描述信息
+</li>
+      </ol>
+      <h3>4.2 方案</h3>
+      <p>YUM服务器配置思路：</p>
+      <p>第一步：确保光驱电源加电，放入Linux光盘的iso镜像</p>
+      <p>第二步：ls  -l  /dev/cdrom  查看linux系统是否识别光驱设备</p>
+      <p>第三步：创建挂载目录:mkdir /dvd  （或也可以使用linux系统提供的挂载目录/media、/mnt）</p>
+      <p>第四步：利用mount命令挂载:mount  /dev/cdrom /dvd</p>
+      <p>第五步：查看挂载情况：mount | grep dvd</p>
+      <p>YUM客户端配置思路：</p>
+      <p>第一步：切换路径到客户端配置文件路径下：cd /etc/yum.repos.d/</p>
+      <p>第二步：排除其他文件的干扰</p>
+      <p>[root@localhost ~]# mkdir /etc/yum.repos.d/repo</p>
+      <p>[root@localhost ~]# mv /etc/yum.repos.d/*.repo   /etc/yum.repos.d/repo</p>
+      <p>第三步：更改配置文件dvd.repo。</p>
+      <p>必须更改的字段：</p>
+      <ul class="list">
+        <li>【】”内容要唯一所以要更改，注意不要有空格
+</li>
+        <li>“baseurl”此字段指定软件包目录，注意路径写对。file：后要有三个“/”
+</li>
+        <li>“enabled”此字段要至于“1”，代表启用
+</li>
+      </ul>
+      <p>Yum在使用方面，几乎rpm能够做到的事情，Yum也能够做到。此外Yum还具备自动解决依赖关系的功能。</p>
+      <p>常用的Yum操作：</p>
+      <ul class="list">
+        <li>yum  install  软件名：安装一个软件包
+</li>
+        <li>yum  remove  软件名：卸载一个软件包
+</li>
+      </ul>
+      <h3>4.3 步骤</h3>
+      <p>实现此案例需要按照如下步骤进行。</p>
+      <p class="number">步骤一：搭建一个本地Yum，将光盘手动挂载到/dvd</p>
+      <p>命令操作如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="#" style="display: none;">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># <span class="sh_normal">mkdir </span><span class="sh_symbol">/</span>dvd</li><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># <span class="sh_normal">ls </span><span class="sh_symbol">/</span>dvd</li><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># <span class="sh_normal">mount </span><span class="sh_symbol">/</span><span class="sh_normal">dev</span><span class="sh_symbol">/</span><span class="sh_normal">cdrom </span><span class="sh_symbol">/</span><span class="sh_normal">dvd</span><span class="sh_symbol">/</span></li><li>mount<span class="sh_symbol">:</span> <span class="sh_regexp">/dev/</span>sr0 写保护，将以只读方式挂载</li><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># <span class="sh_normal">ls </span><span class="sh_symbol">/</span><span class="sh_normal">dvd</span><span class="sh_symbol">/</span></li><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># <span class="sh_normal">ls </span><span class="sh_symbol">/</span><span class="sh_normal">dvd</span><span class="sh_symbol">/</span><span class="sh_normal">Packages</span><span class="sh_symbol">/</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">[root@localhost ~]# mkdir /dvd
+[root@localhost ~]# ls /dvd
+[root@localhost ~]# mount /dev/cdrom /dvd/
+mount: /dev/sr0 写保护，将以只读方式挂载
+[root@localhost ~]# ls /dvd/
+[root@localhost ~]# ls /dvd/Packages/
+
+</pre></div></div>
+      <p class="number">步骤二：将本地设置为客户端，进行Yum验证</p>
+      <p>Yum客户端需编辑配置文件，命令操作如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="#" style="display: none;">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># <span class="sh_normal">ls </span><span class="sh_symbol">/</span><span class="sh_normal">etc</span><span class="sh_symbol">/</span>yum<span class="sh_symbol">.</span>repos<span class="sh_symbol">.</span><span class="sh_normal">d</span><span class="sh_symbol">/</span></li><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># <span class="sh_normal">mkdir </span><span class="sh_symbol">/</span><span class="sh_normal">etc</span><span class="sh_symbol">/</span>yum<span class="sh_symbol">.</span>repos<span class="sh_symbol">.</span><span class="sh_normal">d</span><span class="sh_symbol">/</span>repo</li><li><span class="sh_symbol">[</span>root@localhost <span class="sh_symbol">~]</span># <span class="sh_normal">mv </span><span class="sh_symbol">/</span><span class="sh_normal">etc</span><span class="sh_symbol">/</span>yum<span class="sh_symbol">.</span>repos<span class="sh_symbol">.</span>d<span class="sh_comment">/*.repo  /etc/yum.repos.d/repo </span></li><li><span class="sh_comment">[</span><a class="sh_url" href="mailto:root@localhost">root@localhost</a><span class="sh_comment"> ~]# ls /etc/yum.repos.d/</span></li><li><span class="sh_comment">[</span><a class="sh_url" href="mailto:root@localhost">root@localhost</a><span class="sh_comment"> ~]# vim /etc/yum.repos.d/dvd.repo</span></li><li><span class="sh_comment">[centos] #仓库标识,可以任意</span></li><li><span class="sh_comment">name=hehe lele CentOS7         #仓库的描述信息，可以任意</span></li><li><span class="sh_comment">baseurl=</span><a class="sh_url" href="file:///dvd">file:///dvd</a><span class="sh_comment">             #指定服务端位置，file://代表本地为服务端</span></li><li><span class="sh_comment">enabled=1                     #是否启用本文件</span></li><li><span class="sh_comment">gpgcheck=0                     #是否检测红帽签名信息</span></li><li><span class="sh_comment">[</span><a class="sh_url" href="mailto:root@localhost">root@localhost</a><span class="sh_comment"> ~]# yum repolist         #列出仓库信息</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">[root@localhost ~]# ls /etc/yum.repos.d/
+[root@localhost ~]# mkdir /etc/yum.repos.d/repo
+[root@localhost ~]# mv /etc/yum.repos.d/*.repo  /etc/yum.repos.d/repo 
+[root@localhost ~]# ls /etc/yum.repos.d/
+[root@localhost ~]# vim /etc/yum.repos.d/dvd.repo
+[centos] #仓库标识,可以任意
+name=hehe lele CentOS7 		#仓库的描述信息，可以任意
+baseurl=file:///dvd 			#指定服务端位置，file://代表本地为服务端
+enabled=1 					#是否启用本文件
+gpgcheck=0 					#是否检测红帽签名信息
+[root@localhost ~]# yum repolist 		#列出仓库信息
+
+</pre></div></div>
+      <p class="number">步骤三：查询yum库中是否有firefox包</p>
+      <p>命令操作如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="#" style="display: none;">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">[</span>root@<span class="sh_normal">localhost </span><span class="sh_symbol">/]</span># yum list <span class="sh_symbol">|</span> grep firefox</li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">[root@localhost /]# yum list | grep firefox
+</pre></div></div>
+      <p class="number">步骤四：利用yum安装bind包</p>
+      <p>命令操作如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="#" style="display: none;">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">[</span>root@<span class="sh_normal">localhost </span><span class="sh_symbol">/]</span># yum <span class="sh_symbol">-</span>y install bind</li><li>……</li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">[root@localhost /]# yum -y install bind
+……
+</pre></div></div>
+      <p class="number">步骤二：利用Yum卸载bind</p>
+      <p>命令操作如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="#" style="display: none;">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">[</span>root@<span class="sh_normal">localhost </span><span class="sh_symbol">/]</span># yum <span class="sh_symbol">-</span>y remove bind</li><li>……</li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">[root@localhost /]# yum -y remove bind
+……
+</pre></div></div>
+      <p class="number">步骤四：利用yum search查询与httpd相关的包</p>
+      <p>命令操作如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="#" style="display: none;">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">[</span>root@<span class="sh_normal">localhost </span><span class="sh_symbol">/]</span># yum search httpd</li><li>……</li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">[root@localhost /]# yum search httpd
+……
+
+</pre></div></div>
+      <p class="number">步骤四：利用yum info查询firefox包描述信息</p>
+      <p>命令操作如下所示：</p>
+      <div class="snippet-container" style="undefined;"><div class="sh_acid snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre style="display: none;"><a class="snippet-copy sh_url" href="#" style="display: none;">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="code sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li>root@<span class="sh_normal">localhost </span><span class="sh_symbol">/]</span># yum info firefox</li><li>……</li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">root@localhost /]# yum info firefox
+……
+
+</pre></div></div>
+      <h1>
+      </h1>
+    </div>
+  
+</body><div style="display: block; opacity: 1;"><template data-savepage-shadowroot=""><iframe allowtransparency="true" scrolling="no" class="sk_ui" data-savepage-src="moz-extension://22c8215d-4b57-4c7a-9926-1ea3eb742001/pages/frontend.html" src="" title="Surfingkeys" style="position: fixed; left: 0px; bottom: 0px; width: 100%; height: 0px; z-index: 2147483647;" frameborder="0"></iframe></template></div></html>
